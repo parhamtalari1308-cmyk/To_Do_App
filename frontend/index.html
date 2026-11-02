@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app_container">
+        <!-- بخش کناری -->
+        <aside class="sidebar">
+            <h2 class="logo">📝 To Do</h2>
+            <div class="user_box">
+                <label for="username_input">نام کاربری</label>
+                <input type="text" id="username_input" placeholder="نام کاربری خود را وارد کنید">
+                <button id="set_user_btn">انتخاب کاربر</button>
+                <div id="username_error" class="error_message"></div>
+            </div>
+            <div class="user_info" id="current_user_info"></div>
+        </aside>
+        <!-- بدنه اصلی -->
+        <main class="main_content locked" id="tasks_section">
+            <header class="header">
+                <h1 id="active_username">کاربری انتخاب نشده است</h1>
+            </header>
+            <section class="create_task_section">
+                <input type="text" id="task_title_input" placeholder="عنوان تسک">
+                <input type="text" id="task_description_input" placeholder="توضیحات">
+                <input type="date" id="task_due_date_input">
+                <button id="create_task_btn">+</button>
+            </section>
+            <section class="task_list_section">
+                <ul id="task_list"></ul>
+                <div class="lock_message" id="lock_message">
+                    لطفاً ابتدا نام کاربری را انتخاب کنید
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/js/validators.js"></script>
+    <script src="/static/js/utils.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
